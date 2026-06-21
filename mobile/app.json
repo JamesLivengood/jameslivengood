@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "James Livengood",
+    "slug": "james-livengood",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.jameslivengood.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#0066FF"
+      },
+      "package": "com.jameslivengood.app"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow access to your photos for profile uploads.",
+          "cameraPermission": "Allow camera access for taking photos."
+        }
+      ],
+      "expo-font"
+    ],
+    "scheme": "jameslivengood",
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
