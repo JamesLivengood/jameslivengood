@@ -7,6 +7,7 @@ const TABS: { name: string; title: string; icon: string }[] = [
   { name: 'hotel', title: 'Hotel', icon: '🛏️' },
   { name: 'profile', title: 'Perfil', icon: '👤' },
   { name: 'payment', title: 'Pagos', icon: '💳' },
+  { name: 'contact', title: 'Contacto', icon: '💬' },
 ];
 
 export default function TabLayout() {

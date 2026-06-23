@@ -1,4 +1,4 @@
-import { ScrollView, Text, TouchableOpacity, StyleSheet, View } from 'react-native';
+import { ScrollView, Text, TouchableOpacity, StyleSheet, View, Linking } from 'react-native';
 import { router } from 'expo-router';
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -14,7 +14,7 @@ export default function HomeScreen() {
   return (
     <LinearGradient colors={['#0F0C29', '#1a1040', '#0d0d1a']} style={styles.container}>
       <ScrollView contentContainerStyle={styles.content}>
-        <Text style={styles.greeting}>Welcome back</Text>
+        <Text style={styles.greeting}>Bienvenido</Text>
         <Text style={styles.title}>James Livengood</Text>
         <View style={styles.grid}>
           {CARDS.map((card) => (
@@ -27,6 +27,10 @@ export default function HomeScreen() {
             </TouchableOpacity>
           ))}
         </View>
+        <TouchableOpacity style={styles.whatsappBtn} onPress={() => Linking.openURL('https://wa.me/524438608286')} activeOpacity={0.85}>
+          <Text style={styles.whatsappIcon}>💬</Text>
+          <Text style={styles.whatsappText}>¿Tienes una idea? Escríbeme por WhatsApp</Text>
+        </TouchableOpacity>
       </ScrollView>
     </LinearGradient>
   );
@@ -43,4 +47,15 @@ const styles = StyleSheet.create({
   cardIcon: { fontSize: 28 },
   cardTitle: { fontSize: 17, fontWeight: '700', color: '#fff', marginTop: 4 },
   cardSubtitle: { fontSize: 13, color: 'rgba(255,255,255,0.75)' },
+  whatsappBtn: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 12,
+    backgroundColor: '#25D366',
+    borderRadius: 16,
+    padding: 18,
+    marginTop: 8,
+  },
+  whatsappIcon: { fontSize: 24 },
+  whatsappText: { fontSize: 15, fontWeight: '600', color: '#fff', flex: 1 },
 });
